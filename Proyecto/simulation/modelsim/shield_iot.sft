@@ -1,0 +1,5 @@
+set tool_name "ModelSim-Altera (VHDL)"
+set corner_file_list {
+	{{"Slow Model"} {shield_iot.vho shield_iot_vhd.sdo}}
+	{{"Fast Model"} {shield_iot_fast.vho shield_iot_vhd_fast.sdo}}
+}

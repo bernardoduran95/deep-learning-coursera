@@ -1,0 +1,92 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity bluetooth is
+	
+	port (
+		clk		: 	in std_logic;
+		rst	  	: 	in std_logic;
+		sel		: 	in std_logic;
+		sel_tx	:	in std_logic_vector (1 downto 0);	--Selecciono el dato a mandar
+		rx		:	in std_logic;
+		dato_rx	:	out std_logic;
+		tx		:	out std_logic
+	);
+	
+end bluetooth;
+
+architecture arch_bluetooth of bluetooth is
+
+	--"AT"
+	type array_data is array (0 to 1) of std_logic_vector (7 dwonto 0);
+	constant comando1 : array_data := (x"41", x"54"); 
+
+	--"AT+NAME=Shield_IoT"
+	type array_data2 is array (0 to 17) of std_logic_vector (7 dwonto 0);
+	constant comando2 : array_data2 := (x"41", x"54", x"2b", x"4e", x"41", x"4d", x"45", x"3d", x"53", x"68", x"69", x"65", x"6c", x"64", x"5f", x"49", x"6f", x"54");
+
+	--"AT+RESET"
+	type array_data3 is array (0 to 7) of std_logic_vector (7 dwonto 0);
+	constant comando3 : array_data3 := (x"41", x"54", x"2b", x"52", x"45", x"53", x"45", x"54");
+
+	--"AT+ORGL"
+	type array_data4 is array (0 to 6) of std_logic_vector (7 dwonto 0);
+	constant comando4 : array_data4 := (x"41", x"54", x"2b", x"4f", x"52", x"47", x"4c");
+
+	signal clk_872	:	std_logic; --Clk de 872 Hz
+	signal clk_9600	:	std_logic; --Clk de 9592 Hz (~9600)
+	signal dato_tx	:	std_logic_vector (7 downto 0) := x"00"; --Dato que se envía
+	signal hab		:	std_logic := '0'; --Habilitador del módulo
+	
+	signal long		:	integer := 0; --Longitud del comando que se está enviando
+	signal char		:	integer := 0; --Posición en el comando que se está enviando
+
+begin
+
+	/*inst_clk_872	: divisor_frecuencia --Clock que cambia el dato cada 11 estados del tx
+		generic map (872)
+		port map (clk, rst, hab, clk_872);*/
+	
+	inst_clk_9600	: divisor_frecuencia --Clock de 9600 baudios para la transmisión
+		generic map (9592)
+		port map (clk, rst, hab, clk_9600);
+	
+	inst_tx_uart	: mef_tx_uart
+		port map (clk_9600, rst, dato_tx, tx);
+	
+	process (sel) --Determina si el módulo está activado o no
+	begin
+		case sel is
+			when "00" => hab <= '1';
+			when others => hab <= '0';
+	end process;
+
+	process (sel_tx) --Determina qué comando se envía
+	begin
+		case sel_tx is
+			when "00" => long := comando1'length;
+			when "01" => long := comando2'length;
+			when "10" => long := comando3'length;
+			when "11" => long := comando4'length;
+	end process;
+
+	/*process (clk_872, rst) --Cambia el dato cada 11 estados del tx
+	begin
+		if rst = '1' then --Resetea la posición del dato y el dato a transmitir
+			char := 0;
+			dato_tx := x"00";
+		elsif rising_edge(clk_872) then
+			if char < long --Si no se terminó de mandar el comando
+				case sel_tx is --Determina cuál es el comando que se está enviando
+					when "00" => dato_tx := comando1(char);
+					when "01" => dato_tx := comando2(char);
+					when "10" => dato_tx := comando3(char);
+					when "11" => dato_tx := comando4(char);
+			else
+				char := 0;
+			end if;
+		end if;
+	end process;*/
+
+end arch_bluetooth;

@@ -1,0 +1,51 @@
+--Divisor de frecuencias: Se ingresa el valor de frecuencia deseado en [KHz]
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity divisor_frecuencia is
+	generic
+	(
+		frecuencia : natural := 9	--Frecuencia en [KHz] --cnt_max = f_in/f_out
+	);
+
+	port
+	(
+		clk				: 	in std_logic;	--Frecuencia de entrada
+		rst	  			: 	in std_logic;	--Reset
+		hab				: 	in std_logic;	--Habilitacion
+		clk_out			: 	out std_logic	--Frecuencia de salida
+	);
+
+end divisor_frecuencia;
+
+architecture arch_divisor_frec of divisor_frecuencia is
+
+	constant frecuencia_fpga : natural := 50000; -- Frecuencia en [KHz]
+	constant cnt_max : natural := frecuencia_fpga/frecuencia;
+
+	begin
+		process (clk, rst)
+			variable	cnt : natural range 0 to cnt_max := 0;
+		begin
+			if (rst = '1') then
+				cnt := 0;
+				clk_out <= '0';
+			elsif (rising_edge (clk)) then
+				if hab = '1' then	   
+					cnt := cnt + 1;
+					if cnt <= ((cnt_max/2)) then 	
+						clk_out <= '1';
+					elsif cnt < (cnt_max) then 
+						clk_out <= '0';
+					elsif	cnt = cnt_max then  
+						cnt := 0; 
+					end if;
+				else
+					cnt := cnt;
+				end if;
+			end if;
+		end process;
+
+end arch_divisor_frec;

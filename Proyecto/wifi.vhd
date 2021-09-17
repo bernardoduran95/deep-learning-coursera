@@ -1,0 +1,362 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity wifi is
+	
+	port (
+		clk		: 	in std_logic;
+		rst	  	: 	in std_logic;
+		rx			:	in std_logic;
+		dato_rx	:	out std_logic_vector (7 downto 0);
+		tx			:	out std_logic
+	);
+	
+end wifi;
+
+architecture arch_wifi of wifi is
+
+	component divisor_frecuencia is
+	
+		generic (
+
+		escala : natural := 9	--Escala = f_in/f_out	
+	
+		);
+		
+		port (
+
+			clk				: 	in std_logic;	--Frecuencia de entrada en [Hz]
+			rst	  			: 	in std_logic;	--Reset
+			clk_out			: 	out std_logic
+
+		);
+
+	end component;
+
+	component mef_tx_uart is
+
+		port (
+			clk	: in std_logic;
+			rst	: in std_logic;
+			dato	: in std_logic_vector (7 downto 0) := x"00";
+			tx		: out std_logic
+		);
+	
+	end component;
+
+	component mef_rx_uart is
+
+		port (
+			clk		: in std_logic;
+			rst		: in std_logic;
+			rx			: in std_logic;
+			rx_done	: out std_logic;
+			dato		: out std_logic_vector (7 downto 0) := x"00"
+		);
+	
+	end component;
+
+	type mef is (s0,s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12);
+    signal estado: mef;
+	-- ATCRLF / (CR = Carriage Return, devuelve el puntero al comienzo de la línea) / (LF = Line Feed, mueve el puntero a la siguiente linea sin volver al comienzo de la línea)
+    type array_data is array(0 to 3) of std_logic_vector(7 downto 0);
+    constant comando1 : array_data := (x"41",x"54",x"0d",x"0a");
+    -- AT+CWMODE=1
+    -- x"41", x"54", x"2b", x"43", x"57", x"4d", x"4f", x"44", x"45", x"3d", x"31"
+    type array_data2 is array(0 to 12) of std_logic_vector(7 downto 0);
+    constant comando2 : array_data2 := (x"41",x"54",x"2b",x"43",x"57",x"4d",x"4f",x"44",x"45",x"3d",x"31",x"0d",x"0a");
+    -- AT+CWJAP_DEF="WiFi_Fibertel_f85_2.4GHz","s4r44abg2d"
+    -- x"41",x"54",x"2b",x"43",x"57",x"4a",x"41",x"50",x"5f",x"44",x"45",x"46",x"3d",x"22",x"57",x"69",x"46",x"69",x"5f",x"46",x"69",x"62",x"65",x"72",x"74",x"65",x"6c",x"5f",x"66",x"38",x"35",x"5f",x"32",x"2e",x"34",x"47",x"48",x"7a",x"22",x"2c",x"22",x"73",x"34",x"72",x"34",x"34",x"61",x"62",x"67",x"32",x"64",x"22",x"0d",x"0a" 
+    type array_data3 is array(0 to 53) of std_logic_vector(7 downto 0);
+    constant comando3 : array_data3 := (x"41",x"54",x"2b",x"43",x"57",x"4a",x"41",x"50",x"5f",x"44",x"45",x"46",x"3d",x"22",x"57",x"69",x"46",x"69",x"5f",x"46",x"69",x"62",x"65",x"72",x"74",x"65",x"6c",x"5f",x"66",x"38",x"35",x"5f",x"32",x"2e",x"34",x"47",x"48",x"7a",x"22",x"2c",x"22",x"73",x"34",x"72",x"34",x"34",x"61",x"62",x"67",x"32",x"64",x"22",x"0d",x"0a");
+    -- AT+CIPMUX=1
+    -- x"41", x"54", x"2b", x"43", x"49", x"50", x"4d", x"55", x"58", x"3d", x"31"
+    type array_data4 is array(0 to 12) of std_logic_vector(7 downto 0);
+    constant comando4 : array_data4 := (x"41",x"54",x"2b",x"43",x"49",x"50",x"4d",x"55",x"58",x"3d",x"31",x"0d",x"0a");
+    -- AT+CIPSTART=0,"TCP","api.thingspeak.com",80
+    -- x"41",x"54",x"2b",x"43",x"49",x"50",x"53",x"54",x"41",x"52",x"54",x"3d",x"30",x"2c",x"22",x"54",x"43",x"50",x"22",x"2c",x"22",x"61",x"70",x"69",x"2e",x"74",x"68",x"69",x"6e",x"67",x"73",x"70",x"65",x"61",x"6b",x"2e",x"63",x"6f",x"6d",x"22",x"2c",x"38",x"30);
+    type array_data5 is array(0 to 44) of std_logic_vector(7 downto 0);
+    constant comando5 : array_data5 := (x"41",x"54",x"2b",x"43",x"49",x"50",x"53",x"54",x"41",x"52",x"54",x"3d",x"30",x"2c",x"22",x"54",x"43",x"50",x"22",x"2c",x"22",x"61",x"70",x"69",x"2e",x"74",x"68",x"69",x"6e",x"67",x"73",x"70",x"65",x"61",x"6b",x"2e",x"63",x"6f",x"6d",x"22",x"2c",x"38",x"30",x"0d",x"0a");
+    -- AT+CIPSEND=0,47
+    -- x"41",x"54",x"2b",x"43",x"49",x"50",x"53",x"45",x"4e",x"44",x"3d",x"30",x"2c",x"34",x"37",x"0d",x"0a"
+    type array_data6 is array(0 to 16) of std_logic_vector(7 downto 0);
+    constant comando6 : array_data6 := (x"41",x"54",x"2b",x"43",x"49",x"50",x"53",x"45",x"4e",x"44",x"3d",x"30",x"2c",x"34",x"37",x"0d",x"0a");
+    -- GET /update?api_key=LF5MTNKXPP6X3S6Z&field1=5
+    -- x"47",x"45",x"54",x"20",x"2f",x"75",x"70",x"64",x"61",x"74",x"65",x"3f",x"61",x"70",x"69",x"5f",x"6b",x"65",x"79",x"3d",x"4c",x"46",x"35",x"4d",x"54",x"4e",x"4b",x"58",x"50",x"50",x"36",x"58",x"33",x"53",x"36",x"5a",x"26",x"66",x"69",x"65",x"6c",x"64",x"31",x"3d",x"35",x"0d",x"0a"
+    type array_data7 is array(0 to 46) of std_logic_vector(7 downto 0);
+    constant comando7 : array_data7 := (x"47",x"45",x"54",x"20",x"2f",x"75",x"70",x"64",x"61",x"74",x"65",x"3f",x"61",x"70",x"69",x"5f",x"6b",x"65",x"79",x"3d",x"4c",x"46",x"35",x"4d",x"54",x"4e",x"4b",x"58",x"50",x"50",x"36",x"58",x"33",x"53",x"36",x"5a",x"26",x"66",x"69",x"65",x"6c",x"64",x"31",x"3d",x"35",x"0d",x"0a");
+
+	signal clk_872			:	std_logic; --Clk de 872 Hz (~9600/11)
+	signal clk_9592		:	std_logic; --Clk de 9592 Hz (~9600)
+	signal clk_153472		:	std_logic; --Clk de 153472 Hz (9592*16)
+	signal dato_tx			:	std_logic_vector (7 downto 0) := x"00"; --Dato que se envi­a
+	signal dato_rx_sig	:	std_logic_vector (7 downto 0) := x"00"; --Dato que se recibe
+	signal long				:	integer := 0; --Longitud del comando que se esta enviando
+	signal i					:	integer := 0; --Posicion en el comando que se esta enviando
+	signal fallo			:	integer := 0; --Sirve para contar x cantidad de ciclos de reloj esperando el ok, si no llega, vuelve al estado anterior a mandar el dato de nuevo
+
+begin
+
+	--INSTANCIAS
+
+	inst_clk_872	: divisor_frecuencia --Clock que cambia el dato cada 11 estados del tx
+
+		generic map (11)
+		port map (clk_9592, rst, clk_872);
+	
+	inst_clk_9592	: divisor_frecuencia --Clock de 9600 baudios para la transmision
+
+		generic map (5209)
+		port map (clk, rst, clk_9592);
+	
+	inst_tx_uart	: mef_tx_uart
+
+		port map (clk_9592, rst, dato_tx, tx);
+	
+	inst_clk_153472	: divisor_frecuencia --Clock de 153000 baudios para la recepcion
+
+		generic map (326)
+		port map (clk, rst, clk_153472);
+
+	inst_rx_uart	: mef_rx_uart
+	
+		port map (clk_153472, rst, rx, open, dato_rx_sig);
+	
+	dato_rx <= dato_rx_sig;
+
+	--TRANSMISOR UART
+
+	process(clk_872, rst)
+	begin
+
+		if rst = '0' then 
+
+			fallo <= 0;
+			i <= 0;
+			estado <= s0;
+	
+		elsif rising_edge(clk_872) then 	
+
+			case estado is
+
+				when s0 =>
+
+					if i < comando1'length then   --envio comando 1
+
+						dato_tx <= comando1(i);
+						i <= i+1; 
+
+					else 
+
+						fallo <= 0;
+						i <= 0;
+						estado <= s1;
+						
+					end if;
+
+				when s1 => 
+
+					if dato_rx_sig = x"4b" then		   -- espero ok
+
+						estado <= s2;
+
+					else
+
+						fallo <= fallo+1;
+
+						if fallo >= comando1'length then
+
+							estado <= s0;
+
+						end if;
+
+					end if;
+				
+				when s2 =>
+
+					if i < comando2'length then   --envio comando 2
+
+						dato_tx <= comando2(i);
+						i <= i+1; 
+
+					else 
+
+						fallo <= 0;
+						i <= 0;
+						estado <= s3;
+						
+					end if;
+
+				when s3 => 
+
+					if dato_rx_sig = x"4b" then		   -- espero ok
+
+						estado <= s4;
+
+					else
+
+						fallo <= fallo+1;
+
+						if fallo >= comando2'length then
+
+							estado <= s2;
+
+						end if;
+
+					end if;
+
+				when s4 =>
+
+					if i < comando3'length then   --envio comando 3
+
+						dato_tx <= comando3(i);
+						i <= i+1; 
+
+					else 
+
+						fallo <= 0;
+						i <= 0;
+						estado <= s5;
+						
+					end if;
+
+				when s5 => 
+
+					if dato_rx_sig = x"4b" then		   -- espero ok
+
+						estado <= s6;
+
+					else
+
+						fallo <= fallo+1;
+
+						if fallo >= comando3'length then
+
+							estado <= s4;
+
+						end if;
+
+					end if;
+				
+				when s6 =>
+
+					if i < comando4'length then   --envio comando 4
+
+						dato_tx <= comando4(i);
+						i <= i+1; 
+
+					else 
+
+						fallo <= 0;
+						i <= 0;
+						estado <= s7;
+						
+					end if;
+
+				when s7 => 
+
+					if dato_rx_sig = x"4b" then		   -- espero ok
+
+						estado <= s8;
+
+					else
+
+						fallo <= fallo+1;
+
+						if fallo >= comando4'length then
+
+							estado <= s6;
+
+						end if;
+
+					end if;
+				
+				when s8 =>
+
+					if i < comando5'length then   --envio comando 5
+
+						dato_tx <= comando5(i);
+						i <= i+1; 
+
+					else 
+
+						fallo <= 0;
+						i <= 0;
+						estado <= s9;
+						
+					end if;
+
+				when s9 => 
+
+					if dato_rx_sig = x"4b" then		   -- espero ok
+
+						estado <= s10;
+
+					else
+
+						fallo <= fallo+1;
+
+						if fallo >= comando5'length then
+
+							estado <= s8;
+
+						end if;
+
+					end if;
+				
+				when s10 =>
+
+					if i < comando6'length then   --envio comando 6
+
+						dato_tx <= comando6(i);
+						i <= i+1; 
+
+					else 
+
+						fallo <= 0;
+						i <= 0;
+						estado <= s11;
+						
+					end if;
+
+				when s11 => 
+
+					if dato_rx_sig = x"4b" then		   -- espero ok
+
+						estado <= s12;
+
+					else
+
+						fallo <= fallo+1;
+
+						if fallo >= comando6'length then
+
+							estado <= s10;
+
+						end if;
+
+					end if;
+
+				when others =>
+
+					if i < comando7'length then   --envio comando 7
+
+						dato_tx <= comando7(i);
+						i <= i+1; 
+
+					else 
+
+						fallo <= 0;
+						i <= 0;
+						estado <= s4;
+						
+					end if;
+
+			end case;
+
+		end if;
+
+	end process;
+
+end arch_wifi;

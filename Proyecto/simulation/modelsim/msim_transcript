@@ -1,0 +1,108 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do shield_iot_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/Users/rodrigo/Documents/MEGAsync/Facultad/Tesis/Proyecto/wifi.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity wifi
+# -- Compiling architecture arch_wifi of wifi
+# vcom -93 -work work {C:/Users/rodrigo/Documents/MEGAsync/Facultad/Tesis/Proyecto/shield_iot.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity shield_iot
+# -- Compiling architecture arch_shield_iot of shield_iot
+# vcom -93 -work work {C:/Users/rodrigo/Documents/MEGAsync/Facultad/Tesis/Proyecto/mef_tx_uart.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mef_tx_uart
+# -- Compiling architecture arch_mef_tx_uart of mef_tx_uart
+# vcom -93 -work work {C:/Users/rodrigo/Documents/MEGAsync/Facultad/Tesis/Proyecto/mef_rx_uart.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mef_rx_uart
+# -- Compiling architecture arch_mef_rx_uart of mef_rx_uart
+# vcom -93 -work work {C:/Users/rodrigo/Documents/MEGAsync/Facultad/Tesis/Proyecto/divisor_frecuencia.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity divisor_frecuencia
+# -- Compiling architecture arch_divisor_frec of divisor_frecuencia
+# vcom -93 -work work {C:/Users/rodrigo/Documents/MEGAsync/Facultad/Tesis/Proyecto/bluetooth.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bluetooth
+# -- Compiling architecture arch_bluetooth of bluetooth
+# 
+# vcom -93 -work work {C:/Users/rodrigo/Documents/MEGAsync/Facultad/Tesis/Proyecto/tb_shield_iot.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_shield_iot
+# -- Compiling architecture arch_tb_shield_iot of tb_shield_iot
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  test bench shield
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps test bench shield 
+# ** Error: (vsim-3170) Could not find 'C:/Users/rodrigo/Documents/MEGAsync/Facultad/Tesis/Proyecto/simulation/modelsim/rtl_work.test'.
+# 
+# Error loading design
+# Error: Error loading design 
+#        Pausing macro execution 
+# MACRO ./shield_iot_run_msim_rtl_vhdl.do PAUSED at line 17
+vcom -93 -work work -O0 C:/Users/rodrigo/Documents/MEGAsync/Facultad/Tesis/Proyecto/tb_shield_iot.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_shield_iot
+# -- Compiling architecture arch_tb_shield_iot of tb_shield_iot
+vsim -voptargs=+acc work.tb_shield_iot
+# vsim -voptargs=+acc work.tb_shield_iot 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_shield_iot(arch_tb_shield_iot)
+# Loading work.shield_iot(arch_shield_iot)
+# Loading work.bluetooth(arch_bluetooth)
+# Loading work.divisor_frecuencia(arch_divisor_frec)
+# Loading work.mef_tx_uart(arch_mef_tx_uart)
+# Loading work.mef_rx_uart(arch_mef_rx_uart)
+# Loading work.wifi(arch_wifi)
+add wave -position insertpoint  \
+sim:/tb_shield_iot/inst_shield_iot/inst_bluetooth/inst_tx_uart/clk \
+sim:/tb_shield_iot/inst_shield_iot/inst_bluetooth/inst_tx_uart/dato \
+sim:/tb_shield_iot/inst_shield_iot/inst_bluetooth/inst_tx_uart/estado
+add wave -position insertpoint  \
+sim:/tb_shield_iot/inst_shield_iot/inst_wifi/inst_tx_uart/clk \
+sim:/tb_shield_iot/inst_shield_iot/inst_wifi/inst_tx_uart/dato \
+sim:/tb_shield_iot/inst_shield_iot/inst_wifi/inst_tx_uart/estado
+run -all

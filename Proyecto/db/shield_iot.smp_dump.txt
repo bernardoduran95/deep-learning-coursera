@@ -1,0 +1,58 @@
+
+State Machine - |shield_iot|wifi:inst_wifi|estado
+Name estado.s12 estado.s11 estado.s10 estado.s9 estado.s8 estado.s7 estado.s6 estado.s5 estado.s4 estado.s3 estado.s2 estado.s1 estado.s0 
+estado.s0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+estado.s1 0 0 0 0 0 0 0 0 0 0 0 1 1 
+estado.s2 0 0 0 0 0 0 0 0 0 0 1 0 1 
+estado.s3 0 0 0 0 0 0 0 0 0 1 0 0 1 
+estado.s4 0 0 0 0 0 0 0 0 1 0 0 0 1 
+estado.s5 0 0 0 0 0 0 0 1 0 0 0 0 1 
+estado.s6 0 0 0 0 0 0 1 0 0 0 0 0 1 
+estado.s7 0 0 0 0 0 1 0 0 0 0 0 0 1 
+estado.s8 0 0 0 0 1 0 0 0 0 0 0 0 1 
+estado.s9 0 0 0 1 0 0 0 0 0 0 0 0 1 
+estado.s10 0 0 1 0 0 0 0 0 0 0 0 0 1 
+estado.s11 0 1 0 0 0 0 0 0 0 0 0 0 1 
+estado.s12 1 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |shield_iot|wifi:inst_wifi|mef_rx_uart:inst_rx_uart|estado
+Name estado.stop estado.data estado.start estado.idle 
+estado.idle 0 0 0 0 
+estado.start 0 0 1 1 
+estado.data 0 1 0 1 
+estado.stop 1 0 0 1 
+
+State Machine - |shield_iot|wifi:inst_wifi|mef_tx_uart:inst_tx_uart|estado
+Name estado.stop estado.d7 estado.d6 estado.d5 estado.d4 estado.d3 estado.d2 estado.d1 estado.d0 estado.start estado.idle 
+estado.idle 0 0 0 0 0 0 0 0 0 0 0 
+estado.start 0 0 0 0 0 0 0 0 0 1 1 
+estado.d0 0 0 0 0 0 0 0 0 1 0 1 
+estado.d1 0 0 0 0 0 0 0 1 0 0 1 
+estado.d2 0 0 0 0 0 0 1 0 0 0 1 
+estado.d3 0 0 0 0 0 1 0 0 0 0 1 
+estado.d4 0 0 0 0 1 0 0 0 0 0 1 
+estado.d5 0 0 0 1 0 0 0 0 0 0 1 
+estado.d6 0 0 1 0 0 0 0 0 0 0 1 
+estado.d7 0 1 0 0 0 0 0 0 0 0 1 
+estado.stop 1 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |shield_iot|bluetooth:inst_bluetooth|mef_rx_uart:inst_rx_uart|estado
+Name estado.stop estado.data estado.start estado.idle 
+estado.idle 0 0 0 0 
+estado.start 0 0 1 1 
+estado.data 0 1 0 1 
+estado.stop 1 0 0 1 
+
+State Machine - |shield_iot|bluetooth:inst_bluetooth|mef_tx_uart:inst_tx_uart|estado
+Name estado.stop estado.d7 estado.d6 estado.d5 estado.d4 estado.d3 estado.d2 estado.d1 estado.d0 estado.start estado.idle 
+estado.idle 0 0 0 0 0 0 0 0 0 0 0 
+estado.start 0 0 0 0 0 0 0 0 0 1 1 
+estado.d0 0 0 0 0 0 0 0 0 1 0 1 
+estado.d1 0 0 0 0 0 0 0 1 0 0 1 
+estado.d2 0 0 0 0 0 0 1 0 0 0 1 
+estado.d3 0 0 0 0 0 1 0 0 0 0 1 
+estado.d4 0 0 0 0 1 0 0 0 0 0 1 
+estado.d5 0 0 0 1 0 0 0 0 0 0 1 
+estado.d6 0 0 1 0 0 0 0 0 0 0 1 
+estado.d7 0 1 0 0 0 0 0 0 0 0 1 
+estado.stop 1 0 0 0 0 0 0 0 0 0 1 

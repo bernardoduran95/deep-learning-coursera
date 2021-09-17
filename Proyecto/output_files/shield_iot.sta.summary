@@ -1,0 +1,101 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'divisor_frecuencia:inst_clk_872|clk_out'
+Slack : -7.977
+TNS   : -637.099
+
+Type  : Slow Model Setup 'clk'
+Slack : -5.690
+TNS   : -148.203
+
+Type  : Slow Model Setup 'divisor_frecuencia:inst_clk_153472|clk_out'
+Slack : -3.093
+TNS   : -73.499
+
+Type  : Slow Model Setup 'divisor_frecuencia:inst_clk_9592|clk_out'
+Slack : -0.196
+TNS   : -0.557
+
+Type  : Slow Model Hold 'clk'
+Slack : -2.629
+TNS   : -5.854
+
+Type  : Slow Model Hold 'divisor_frecuencia:inst_clk_153472|clk_out'
+Slack : 0.499
+TNS   : 0.000
+
+Type  : Slow Model Hold 'divisor_frecuencia:inst_clk_872|clk_out'
+Slack : 0.499
+TNS   : 0.000
+
+Type  : Slow Model Hold 'divisor_frecuencia:inst_clk_9592|clk_out'
+Slack : 0.742
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'clk'
+Slack : -1.941
+TNS   : -62.785
+
+Type  : Slow Model Minimum Pulse Width 'divisor_frecuencia:inst_clk_872|clk_out'
+Slack : -0.742
+TNS   : -124.656
+
+Type  : Slow Model Minimum Pulse Width 'divisor_frecuencia:inst_clk_153472|clk_out'
+Slack : -0.742
+TNS   : -40.068
+
+Type  : Slow Model Minimum Pulse Width 'divisor_frecuencia:inst_clk_9592|clk_out'
+Slack : -0.742
+TNS   : -16.324
+
+Type  : Fast Model Setup 'divisor_frecuencia:inst_clk_872|clk_out'
+Slack : -1.869
+TNS   : -143.515
+
+Type  : Fast Model Setup 'clk'
+Slack : -1.170
+TNS   : -24.115
+
+Type  : Fast Model Setup 'divisor_frecuencia:inst_clk_153472|clk_out'
+Slack : -0.417
+TNS   : -6.666
+
+Type  : Fast Model Setup 'divisor_frecuencia:inst_clk_9592|clk_out'
+Slack : 0.583
+TNS   : 0.000
+
+Type  : Fast Model Hold 'clk'
+Slack : -1.406
+TNS   : -3.628
+
+Type  : Fast Model Hold 'divisor_frecuencia:inst_clk_153472|clk_out'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'divisor_frecuencia:inst_clk_872|clk_out'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'divisor_frecuencia:inst_clk_9592|clk_out'
+Slack : 0.238
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'clk'
+Slack : -1.380
+TNS   : -42.380
+
+Type  : Fast Model Minimum Pulse Width 'divisor_frecuencia:inst_clk_872|clk_out'
+Slack : -0.500
+TNS   : -84.000
+
+Type  : Fast Model Minimum Pulse Width 'divisor_frecuencia:inst_clk_153472|clk_out'
+Slack : -0.500
+TNS   : -27.000
+
+Type  : Fast Model Minimum Pulse Width 'divisor_frecuencia:inst_clk_9592|clk_out'
+Slack : -0.500
+TNS   : -11.000
+
+------------------------------------------------------------

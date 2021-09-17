@@ -1,0 +1,86 @@
+library ieee;
+
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity tb_bluetooth is
+end tb_bluetooth;
+
+architecture arch_tb_bluetooth of tb_bluetooth is
+
+component bluetooth is
+	
+	port (
+		clk		: 	in std_logic;
+		rst	  	: 	in std_logic;
+		sel		: 	in std_logic_vector (1 downto 0);
+		sel_tx	:	in std_logic_vector (1 downto 0);	--Selecciono el dato a mandar
+		rx		:	in std_logic;
+		dato_rx	:	out std_logic;
+		tx		:	out std_logic
+	);
+	
+end component;
+
+signal clk		: 	std_logic;
+signal rst	  	: 	std_logic;
+signal sel		: 	std_logic_vector (1 downto 0);
+signal sel_tx	:	std_logic_vector (1 downto 0);
+signal rx		:	std_logic;
+signal dato_rx	:	std_logic;
+signal tx		:	std_logic;
+
+begin
+
+	inst_bluetooth	:	bluetooth
+		port map (clk, rst, sel, sel_tx, rx, dato_rx, tx);
+	
+	rst <= '0';
+	
+	process --Clock 50 MHz
+	begin
+		clk <= '0';
+		wait for 20 ns;
+		clk <= '1';
+		wait for 20 ns;
+	end process;
+
+	process --Reset
+	begin
+		rst <= '1';
+		wait for 250 ns;
+		rst <= '0';
+		wait;
+	end process;
+
+	process --Selector de módulo
+	begin
+		sel <= "00";
+		wait for 500 ns;
+		sel <= "11";
+		wait for 200 ns;
+		sel <= "00"
+		wait;
+	end process;
+
+	process --Selector de comando
+	begin
+		sel_tx <= "00";
+		wait for 250 ns;
+		sel_tx <= "01";
+		wait for 250 ns;
+		sel_tx <= "10";
+		wait for 250 ns;
+		sel_tx <= "11";
+		wait;
+	end process;
+
+	process --Reset
+	begin
+		rst <= '1';
+		wait for 250 ns;
+		clk <= '0';
+		wait;
+	end process;
+	
+end arch_tb_bluetooth;
