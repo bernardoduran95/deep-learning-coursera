@@ -1,6 +1,8 @@
 |shield_iot
 clk => bluetooth:inst_bluetooth.clk
 clk => wifi:inst_wifi.clk
+seg1 <= <VCC>
+seg2 <= <GND>
 rst => bluetooth:inst_bluetooth.rst
 rst => wifi:inst_wifi.rst
 rx_bt => bluetooth:inst_bluetooth.rx

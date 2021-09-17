@@ -6,6 +6,10 @@ entity shield_iot is
 	
 	port (
 		clk			: in std_logic;
+		--Auxiliares para 7 segmentos
+		seg1			: out std_logic;
+		seg2			: out std_logic;
+		--Fin auxiliares para 7 segmentos
 		rst			: in std_logic;
 		rx_bt			: in std_logic;
 		rx_wf			: in std_logic;
@@ -52,5 +56,8 @@ begin
 	inst_wifi	:	wifi
 	
 		port map (clk, rst, rx_wf, dato_rx_wf, tx_wf);
+	
+	seg1 <= '1';
+	seg2 <= '0';
 
 end arch_shield_iot;

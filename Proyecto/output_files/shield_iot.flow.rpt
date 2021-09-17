@@ -1,5 +1,5 @@
 Flow report for shield_iot
-Thu Sep 16 20:09:10 2021
+Thu Sep 16 22:13:13 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Thu Sep 16 20:09:05 2021           ;
+; Flow Status                        ; Successful - Thu Sep 16 22:13:13 2021           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; shield_iot                                      ;
 ; Top-level Entity Name              ; shield_iot                                      ;
@@ -51,7 +51,7 @@ applicable agreement for further details.
 ;     Total combinational functions  ; 598                                             ;
 ;     Dedicated logic registers      ; 235                                             ;
 ; Total registers                    ; 235                                             ;
-; Total pins                         ; 22                                              ;
+; Total pins                         ; 24                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/16/2021 20:09:00 ;
+; Start date & time ; 09/16/2021 22:13:09 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; shield_iot          ;
 +-------------------+---------------------+
@@ -75,23 +75,27 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id           ;
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------------+
-; COMPILER_SIGNATURE_ID                ; 91755303762.163183373915388           ; --            ; --          ; --                   ;
+; COMPILER_SIGNATURE_ID                ; 91755303762.163184118918568           ; --            ; --          ; --                   ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; test bench bluetooth ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; test bench wifi      ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; test bench divisor   ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; test bench bluetooth                  ; --            ; --          ; eda_simulation       ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; test bench shield    ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; test bench shield                     ; --            ; --          ; eda_simulation       ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                  ; --            ; --          ; eda_simulation       ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (VHDL)                ; <None>        ; --          ; --                   ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                       ; --            ; --          ; eda_simulation       ;
 ; EDA_TEST_BENCH_FILE                  ; tb_bluetooth.vhd                      ; --            ; --          ; test bench bluetooth ;
 ; EDA_TEST_BENCH_FILE                  ; tb_wifi.vhd                           ; --            ; --          ; test bench wifi      ;
 ; EDA_TEST_BENCH_FILE                  ; tb_divisor_frecuencia.vhd             ; --            ; --          ; test bench divisor   ;
+; EDA_TEST_BENCH_FILE                  ; tb_shield_iot.vhd                     ; --            ; --          ; test bench shield    ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; test bench bluetooth                  ; --            ; --          ; test bench bluetooth ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; test bench wifi                       ; --            ; --          ; test bench wifi      ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; test bench divisor                    ; --            ; --          ; test bench divisor   ;
+; EDA_TEST_BENCH_MODULE_NAME           ; test bench shield                     ; --            ; --          ; test bench shield    ;
 ; EDA_TEST_BENCH_NAME                  ; test bench bluetooth                  ; --            ; --          ; eda_simulation       ;
 ; EDA_TEST_BENCH_NAME                  ; test bench wifi                       ; --            ; --          ; eda_simulation       ;
 ; EDA_TEST_BENCH_NAME                  ; test bench divisor                    ; --            ; --          ; eda_simulation       ;
+; EDA_TEST_BENCH_NAME                  ; test bench shield                     ; --            ; --          ; eda_simulation       ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                    ; --            ; --          ; --                   ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                     ; --            ; --          ; --                   ;
 ; PARTITION_COLOR                      ; 16764057                              ; --            ; --          ; Top                  ;
@@ -108,8 +112,8 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:05     ; 1.0                     ; 4629 MB             ; 00:00:04                           ;
-; Total                ; 00:00:05     ; --                      ; --                  ; 00:00:04                           ;
+; Analysis & Synthesis ; 00:00:04     ; 1.0                     ; 4641 MB             ; 00:00:04                           ;
+; Total                ; 00:00:04     ; --                      ; --                  ; 00:00:04                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
