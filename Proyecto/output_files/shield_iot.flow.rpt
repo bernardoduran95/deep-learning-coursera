@@ -1,5 +1,5 @@
 Flow report for shield_iot
-Thu Sep 16 22:13:13 2021
+Wed Sep 22 18:49:34 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,18 +40,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Thu Sep 16 22:13:13 2021           ;
+; Flow Status                        ; Successful - Wed Sep 22 18:49:34 2021           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; shield_iot                                      ;
 ; Top-level Entity Name              ; shield_iot                                      ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C8Q208C8                                     ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 634                                             ;
-;     Total combinational functions  ; 598                                             ;
-;     Dedicated logic registers      ; 235                                             ;
-; Total registers                    ; 235                                             ;
-; Total pins                         ; 24                                              ;
+; Total logic elements               ; 684                                             ;
+;     Total combinational functions  ; 648                                             ;
+;     Dedicated logic registers      ; 260                                             ;
+; Total registers                    ; 260                                             ;
+; Total pins                         ; 33                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/16/2021 22:13:09 ;
+; Start date & time ; 09/22/2021 18:49:29 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; shield_iot          ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id           ;
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------------+
-; COMPILER_SIGNATURE_ID                ; 91755303762.163184118918568           ; --            ; --          ; --                   ;
+; COMPILER_SIGNATURE_ID                ; 141812758225529.163234736805076       ; --            ; --          ; --                   ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; test bench bluetooth ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; test bench wifi      ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; test bench divisor   ;
@@ -112,8 +112,8 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:04     ; 1.0                     ; 4641 MB             ; 00:00:04                           ;
-; Total                ; 00:00:04     ; --                      ; --                  ; 00:00:04                           ;
+; Analysis & Synthesis ; 00:00:05     ; 1.0                     ; 4628 MB             ; 00:00:05                           ;
+; Total                ; 00:00:05     ; --                      ; --                  ; 00:00:05                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -122,7 +122,7 @@ applicable agreement for further details.
 +----------------------+------------------+-----------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +----------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis ; Rodrigo          ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-E88V4MJ  ; Windows 7 ; 6.2        ; x86_64         ;
 +----------------------+------------------+-----------+------------+----------------+
 
 
