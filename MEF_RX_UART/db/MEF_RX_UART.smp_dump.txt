@@ -1,0 +1,7 @@
+
+State Machine - |mef_rx_uart|estado
+Name estado.stop estado.data estado.start estado.idle 
+estado.idle 0 0 0 0 
+estado.start 0 0 1 1 
+estado.data 0 1 0 1 
+estado.stop 1 0 0 1 

@@ -1,0 +1,121 @@
+# Reading C:/Programas/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do Divisor_Frecuencia_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\Programas\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\Programas\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/Users/rodri/Documents/Tesis/Archivos_VHDL/divisor_frecuencia.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity divisor_frecuencia
+# -- Compiling architecture arch_divisor_frec of divisor_frecuencia
+# 
+# vcom -93 -work work {C:/Users/rodri/Documents/Tesis/Divisor_Frecuencia/../Archivos_VHDL/tb_divisor_frecuencia.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# ** Error: (vcom-11) Could not find work.package_tesis.
+# 
+# ** Error: C:/Users/rodri/Documents/Tesis/Divisor_Frecuencia/../Archivos_VHDL/tb_divisor_frecuencia.vhd(5): (vcom-1195) Cannot find expanded name "work.package_tesis".
+# 
+# ** Error: C:/Users/rodri/Documents/Tesis/Divisor_Frecuencia/../Archivos_VHDL/tb_divisor_frecuencia.vhd(5): Unknown expanded name.
+# ** Error: C:/Users/rodri/Documents/Tesis/Divisor_Frecuencia/../Archivos_VHDL/tb_divisor_frecuencia.vhd(7): VHDL Compiler exiting
+# ** Error: C:/Programas/altera/13.0sp1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./Divisor_Frecuencia_run_msim_rtl_vhdl.do line 10
+# C:/Programas/altera/13.0sp1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -93 -work work {C:/Users/rodri/Documents/Tesis/Divisor_Frecuencia/../Archivos_VHDL/tb_divisor_frecuencia.vhd}"
+vcom -reportprogress 300 -work work C:/Users/rodri/Documents/Tesis/Archivos_VHDL/divisor_frecuencia.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity divisor_frecuencia
+# -- Compiling architecture arch_divisor_frec of divisor_frecuencia
+vcom -reportprogress 300 -work work C:/Users/rodri/Documents/Tesis/Archivos_VHDL/package_tesis.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling package package_tesis
+vcom -reportprogress 300 -work work C:/Users/rodri/Documents/Tesis/Archivos_VHDL/tb_divisor_frecuencia.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package package_tesis
+# -- Compiling entity tb_divisor_frecuencia
+# -- Compiling architecture arch_tb_divisor_frecuencia of tb_divisor_frecuencia
+clean
+# invalid command name "clean"
+clean
+# invalid command name "clean"
+vcom -reportprogress 300 -work work C:/Users/rodri/Documents/Tesis/Archivos_VHDL/divisor_frecuencia.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity divisor_frecuencia
+# -- Compiling architecture arch_divisor_frec of divisor_frecuencia
+vcom -reportprogress 300 -work work C:/Users/rodri/Documents/Tesis/Archivos_VHDL/package_tesis.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling package package_tesis
+vcom -reportprogress 300 -work work C:/Users/rodri/Documents/Tesis/Archivos_VHDL/tb_divisor_frecuencia.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package package_tesis
+# -- Compiling entity tb_divisor_frecuencia
+# -- Compiling architecture arch_tb_divisor_frecuencia of tb_divisor_frecuencia
+vsim work.divisor_frecuencia
+# vsim work.divisor_frecuencia 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.divisor_frecuencia(arch_divisor_frec)
+vsim work.tb_divisor_frecuencia
+# vsim work.tb_divisor_frecuencia 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.package_tesis
+# Loading work.tb_divisor_frecuencia(arch_tb_divisor_frecuencia)
+# Loading work.divisor_frecuencia(arch_divisor_frec)
+add wave -position insertpoint  \
+sim:/tb_divisor_frecuencia/clk \
+sim:/tb_divisor_frecuencia/rst \
+sim:/tb_divisor_frecuencia/clk_out
+run -all

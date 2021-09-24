@@ -1,0 +1,107 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\rodri\Documents\Tesis\Divisor_Frecuencia\simulation\modelsim
+Edivisor_frecuencia
+Z1 w1632493327
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\Users\rodri\Documents\Tesis\Divisor_Frecuencia\simulation\modelsim
+Z6 8C:/Users/rodri/Documents/Tesis/Archivos_VHDL/divisor_frecuencia.vhd
+Z7 FC:/Users/rodri/Documents/Tesis/Archivos_VHDL/divisor_frecuencia.vhd
+l0
+L7
+Ve7Lo]<Xo3ObLJA4OH^>fN2
+Z8 OV;C;10.1d;51
+32
+Z9 !s108 1632493398.587000
+Z10 !s90 -reportprogress|300|-work|work|C:/Users/rodri/Documents/Tesis/Archivos_VHDL/divisor_frecuencia.vhd|
+Z11 !s107 C:/Users/rodri/Documents/Tesis/Archivos_VHDL/divisor_frecuencia.vhd|
+Z12 o-work work -O0
+Z13 tExplicit 1
+!s100 eTf5;PVUN9Y_nF4G?3CaC2
+!i10b 1
+Aarch_divisor_frec
+R2
+R3
+R4
+DEx4 work 18 divisor_frecuencia 0 22 e7Lo]<Xo3ObLJA4OH^>fN2
+l27
+L25
+VKZFlQf8enEKCUhOTWR4n71
+R8
+32
+R9
+R10
+R11
+R12
+R13
+!s100 17kkH@A@aoQCIdV53N]BS3
+!i10b 1
+Ppackage_tesis
+Z14 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z15 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+R2
+R3
+R4
+w1632354981
+R5
+8C:/Users/rodri/Documents/Tesis/Archivos_VHDL/package_tesis.vhd
+FC:/Users/rodri/Documents/Tesis/Archivos_VHDL/package_tesis.vhd
+l0
+L7
+VO?]nTfKV1geC0o73M:8=[3
+R8
+32
+R12
+R13
+!s100 Fm5Z>:=`E5fY:5F:VL9?=3
+!i10b 1
+!s108 1632493398.881000
+!s90 -reportprogress|300|-work|work|C:/Users/rodri/Documents/Tesis/Archivos_VHDL/package_tesis.vhd|
+!s107 C:/Users/rodri/Documents/Tesis/Archivos_VHDL/package_tesis.vhd|
+Etb_divisor_frecuencia
+Z16 w1632492753
+R14
+R15
+Z17 DPx4 work 13 package_tesis 0 22 O?]nTfKV1geC0o73M:8=[3
+R2
+R3
+R4
+R5
+Z18 8C:/Users/rodri/Documents/Tesis/Archivos_VHDL/tb_divisor_frecuencia.vhd
+Z19 FC:/Users/rodri/Documents/Tesis/Archivos_VHDL/tb_divisor_frecuencia.vhd
+l0
+L7
+VJVY@CJg[Bi_SFWzj[?G:I0
+!s100 SEBn>ZhJ<4_2Zc1^1G7b=3
+R8
+32
+!i10b 1
+Z20 !s108 1632493399.064000
+Z21 !s90 -reportprogress|300|-work|work|C:/Users/rodri/Documents/Tesis/Archivos_VHDL/tb_divisor_frecuencia.vhd|
+Z22 !s107 C:/Users/rodri/Documents/Tesis/Archivos_VHDL/tb_divisor_frecuencia.vhd|
+R12
+R13
+Aarch_tb_divisor_frecuencia
+R14
+R15
+R17
+R2
+R3
+R4
+Z23 DEx4 work 21 tb_divisor_frecuencia 0 22 JVY@CJg[Bi_SFWzj[?G:I0
+l16
+L10
+Z24 Vn9dmbB;986BUU0oJGkZ:Z2
+Z25 !s100 T<b4Y0>Nd8nKXbkFoGidR3
+R8
+32
+!i10b 1
+R20
+R21
+R22
+R12
+R13

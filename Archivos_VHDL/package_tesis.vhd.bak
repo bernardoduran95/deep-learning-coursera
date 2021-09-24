@@ -1,0 +1,137 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.std_logic_unsigned.all;
+
+
+package package_rodri is
+
+component ROM_Interna is
+	PORT
+	(
+		address		: IN STD_LOGIC_VECTOR (6 DOWNTO 0);
+		clock			: IN STD_LOGIC  := '1';
+		q				: OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
+	);
+end component;
+
+component divisor_frec is
+
+	generic
+	(
+		cnt_min : integer := 0;
+		cnt_max : integer := 9	--cnt_max = f_in/f_out
+	);
+
+	port
+	(
+		clk				: 	in std_logic;	--frecuencia de entrada
+		rst	  			: 	in std_logic;	--reset
+		hab				: 	in std_logic;	--señal de habilitacion
+		clk_out			: 	out std_logic;	--frecuencia de salida
+		cnt_out			: 	out integer range cnt_min to cnt_max	--contador de salida
+	);
+
+end component;
+
+component display is
+	port
+	(
+		-- Input ports
+		dir:	in std_logic_vector (3 downto 0);	--Que display quiero que se prenda
+
+		-- Output ports
+		dis:	out std_logic_vector (3 downto 0)	--Selecciona el display
+		
+	);
+end component;
+
+component antirrebote is
+	generic
+	(
+		cnt_max	: integer := 99	--Cuentas para que pasen todos los rebotes
+	);
+	
+	port
+	(
+		-- Input ports
+		clk, tecla_in	: in  std_logic;
+
+		-- Output ports
+		tecla_out		: out std_logic 
+	);
+end component;
+
+component rom_lcd IS
+	PORT
+	(
+		address		: IN STD_LOGIC_VECTOR (6 DOWNTO 0);
+		clock		: IN STD_LOGIC  := '1';
+		q		: OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
+	);
+end component;
+
+component lcd_ctrl is
+	port
+	(
+		-- Input ports
+		clk, rst	: in std_logic;
+		caracter	: in std_logic_vector (7 downto 0); 
+		-- Output ports
+		rw, rs, e	: out std_logic;
+		letra			: out std_logic_vector (7 downto 0);
+		posicion		: out std_logic_vector (6 downto 0)
+	);
+end component;
+
+component mef_uart_tx is
+
+	port
+	(
+		-- Input ports
+		clk, rst	: in  std_logic;
+		dato		: in  std_logic_vector (7 downto 0);
+
+		-- Output ports
+		tx			: out std_logic
+	);
+end component;
+
+component mef_uart_rx is
+	port
+	(
+		rx, reset, clock: in std_logic := '1';
+		rx_done: out std_logic := '1';
+		display: out std_logic_vector (3 downto 0) := "0101";
+		dato: out std_logic_vector (7 downto 0) := x"00"
+	);
+end component;
+
+component uart is
+	generic
+	(
+		long_dato : integer := 7
+	);
+	port
+	(
+		-- Input ports
+		clock, reset	: in std_logic;
+		dato: in string (1 to long_dato);
+
+		-- Output ports
+		tx	: out std_logic
+	);
+end component;
+
+component spi is
+	port
+	(
+		clock, reset, miso	: in std_logic;
+		cnt						: out integer range 0 to 19;--por que 19?
+		data						: out std_logic_vector (11 downto 0);
+		canal						: in std_logic_vector (2 downto 0);
+		mosi, cs, sclk			: out std_logic
+		);
+end component;
+	
+end package package_rodri;
