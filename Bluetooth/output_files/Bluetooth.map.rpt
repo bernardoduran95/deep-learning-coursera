@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Bluetooth
-Fri Sep 24 12:54:24 2021
+Fri Sep 24 13:44:42 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -46,7 +46,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Sep 24 12:54:24 2021           ;
+; Analysis & Synthesis Status        ; Successful - Fri Sep 24 13:44:42 2021           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Bluetooth                                       ;
 ; Top-level Entity Name              ; bluetooth                                       ;
@@ -304,7 +304,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Sep 24 12:54:22 2021
+    Info: Processing started: Fri Sep 24 13:44:40 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Bluetooth -c Bluetooth
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 0 entities, in source file /users/rodri/documents/tesis/archivos_vhdl/package_tesis.vhd
@@ -326,9 +326,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
     Info (12023): Found entity 1: tb_bluetooth
 Info (12127): Elaborating entity "Bluetooth" for the top level hierarchy
 Warning (10541): VHDL Signal Declaration warning at bluetooth.vhd(13): used implicit default value for signal "dato_rx" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10036): Verilog HDL or VHDL warning at bluetooth.vhd(29): object "no_clk_872" assigned a value but never read
 Warning (10540): VHDL Signal Declaration warning at bluetooth.vhd(30): used explicit default value for signal "long" because signal was never assigned a value
-Warning (10492): VHDL Process Statement warning at bluetooth.vhd(90): signal "clk_872" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "divisor_frecuencia" for hierarchy "divisor_frecuencia:inst_clk_9600"
 Info (12128): Elaborating entity "mef_tx_uart" for hierarchy "mef_tx_uart:inst_tx_uart"
 Info (12128): Elaborating entity "divisor_frecuencia" for hierarchy "divisor_frecuencia:inst_clk_872"
@@ -353,9 +351,9 @@ Info (21057): Implemented 128 device resources after synthesis - the final resou
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 9 output pins
     Info (21061): Implemented 116 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 20 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 18 warnings
     Info: Peak virtual memory: 4627 megabytes
-    Info: Processing ended: Fri Sep 24 12:54:24 2021
+    Info: Processing ended: Fri Sep 24 13:44:42 2021
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

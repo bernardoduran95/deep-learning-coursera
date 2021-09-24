@@ -1,5 +1,5 @@
 EDA Netlist Writer report for Divisor_Frecuencia
-Fri Sep 24 11:22:24 2021
+Fri Sep 24 13:45:48 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Fri Sep 24 11:22:24 2021 ;
+; EDA Netlist Writer Status ; Successful - Fri Sep 24 13:45:48 2021 ;
 ; Revision Name             ; Divisor_Frecuencia                    ;
 ; Top-level Entity Name     ; divisor_frecuencia                    ;
 ; Family                    ; Cyclone II                            ;
@@ -84,12 +84,12 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Sep 24 11:22:24 2021
+    Info: Processing started: Fri Sep 24 13:45:48 2021
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off Divisor_Frecuencia -c Divisor_Frecuencia
 Info (204026): Generated files "Divisor_Frecuencia.vho", "Divisor_Frecuencia_fast.vho", "Divisor_Frecuencia_vhd.sdo" and "Divisor_Frecuencia_vhd_fast.sdo" in directory "C:/Users/rodri/Documents/Tesis/Divisor_Frecuencia/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4513 megabytes
-    Info: Processing ended: Fri Sep 24 11:22:24 2021
+    Info: Processing ended: Fri Sep 24 13:45:48 2021
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
