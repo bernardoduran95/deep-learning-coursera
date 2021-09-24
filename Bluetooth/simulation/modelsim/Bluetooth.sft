@@ -1,0 +1,5 @@
+set tool_name "ModelSim-Altera (VHDL)"
+set corner_file_list {
+	{{"Slow Model"} {Bluetooth.vho Bluetooth_vhd.sdo}}
+	{{"Fast Model"} {Bluetooth_fast.vho Bluetooth_vhd_fast.sdo}}
+}

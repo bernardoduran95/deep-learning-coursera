@@ -60,5 +60,21 @@ component mef_rx_uart is
 	);
 
 end component;
+
+
+
+----BLUETOOTH----
+
+component bluetooth is
+	
+	port (
+		clk		: 	in std_logic;
+		rst	  	: 	in std_logic;
+		tx			:	out std_logic;
+		rx			:	in std_logic;
+		dato_rx	:	out std_logic_vector (7 downto 0)
+	);
+	
+end component;
 	
 end package package_tesis;
