@@ -10,7 +10,11 @@ entity bluetooth is
 		rst	  	: 	in std_logic;
 		tx			:	out std_logic;
 		rx			:	in std_logic;
-		dato_rx	:	out std_logic_vector (7 downto 0)
+		dato_rx	:	out std_logic_vector (7 downto 0);
+		----PARA PRUEBAS----
+		seg_0		:	out std_logic;
+		seg_1		:	out std_logic
+		
 	);
 	
 end bluetooth;
@@ -32,12 +36,14 @@ architecture arch_bluetooth of bluetooth is
 	
 	
 
---	signal clk_153472		:	std_logic; --Clk de 153472 Hz (9592*16)a
---	signal dato_rx_sig	:	std_logic_vector (7 downto 0) := x"00"; --Dato que se recibe
---	signal long				:	integer := comando'length; --Longitud del comando que se esta enviando
---	signal char				:	integer := 0; --Posicion en el comando que se esta enviando
+	----SEÑALES TX----
+	signal clk_153600		:	std_logic; --Clk de 153600 Hz (9592*16)
+	signal dato_rx_sig	:	std_logic_vector (7 downto 0) := x"00"; --Dato que se recibe
 
 begin
+
+	seg_0 <= '1';
+	seg_1 <= '0';
 
 	no_clk_9600 <= not clk_9600;
 	no_clk_872 <= not clk_872;
@@ -64,18 +70,16 @@ begin
 	
 	----RECEPCION----
 
+	inst_clk_153600	: divisor_frecuencia --Clock de 153000 baudios para la recepcion
 
---	
---	inst_clk_153472	: divisor_frecuencia --Clock de 153000 baudios para la recepcion
---
---		generic map (326)
---		port map (clk, rst, clk_153472);
---
---	inst_rx_uart	: mef_rx_uart
---	
---		port map (clk_153472, rst, rx, open, dato_rx_sig);
---	
---	dato_rx <= dato_rx_sig;
+		generic map (325)
+		port map (clk, rst, clk_153600);
+
+	inst_rx_uart	: mef_rx_uart
+	
+		port map (clk_153600, rst, rx, open, dato_rx_sig);
+	
+	dato_rx <= dato_rx_sig;
 
 	----TRANSMISION----
 

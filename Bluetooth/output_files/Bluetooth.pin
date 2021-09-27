@@ -96,9 +96,9 @@ VCCIO1                       : 29        : power  :                   : 3.3V    
 GND*                         : 30        :        :                   :         : 1         :                
 GND*                         : 31        :        :                   :         : 1         :                
 VCCINT                       : 32        : power  :                   : 1.2V    :           :                
-dato_rx[2]                   : 33        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : 33        :        :                   :         : 1         :                
 GND*                         : 34        :        :                   :         : 1         :                
-dato_rx[0]                   : 35        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : 35        :        :                   :         : 1         :                
 GND                          : 36        : gnd    :                   :         :           :                
 GND*                         : 37        :        :                   :         : 1         :                
 GND                          : 38        : gnd    :                   :         :           :                
@@ -127,7 +127,7 @@ GND*                         : 60        :        :                   :         
 GND*                         : 61        :        :                   :         : 4         :                
 VCCIO4                       : 62        : power  :                   : 3.3V    : 4         :                
 GND*                         : 63        :        :                   :         : 4         :                
-dato_rx[4]                   : 64        : output : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : 64        :        :                   :         : 4         :                
 GND                          : 65        : gnd    :                   :         :           :                
 VCCINT                       : 66        : power  :                   : 1.2V    :           :                
 GND*                         : 67        :        :                   :         : 4         :                
@@ -135,7 +135,7 @@ GND*                         : 68        :        :                   :         
 GND*                         : 69        :        :                   :         : 4         :                
 GND*                         : 70        :        :                   :         : 4         :                
 VCCIO4                       : 71        : power  :                   : 3.3V    : 4         :                
-dato_rx[7]                   : 72        : output : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : 72        :        :                   :         : 4         :                
 GND                          : 73        : gnd    :                   :         :           :                
 GND*                         : 74        :        :                   :         : 4         :                
 GND*                         : 75        :        :                   :         : 4         :                
@@ -153,18 +153,18 @@ GND*                         : 86        :        :                   :         
 GND*                         : 87        :        :                   :         : 4         :                
 GND*                         : 88        :        :                   :         : 4         :                
 GND*                         : 89        :        :                   :         : 4         :                
-dato_rx[6]                   : 90        : output : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : 90        :        :                   :         : 4         :                
 VCCIO4                       : 91        : power  :                   : 3.3V    : 4         :                
 GND*                         : 92        :        :                   :         : 4         :                
 GND                          : 93        : gnd    :                   :         :           :                
 GND*                         : 94        :        :                   :         : 4         :                
 GND*                         : 95        :        :                   :         : 4         :                
 GND*                         : 96        :        :                   :         : 4         :                
-dato_rx[1]                   : 97        : output : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : 97        :        :                   :         : 4         :                
 VCCIO4                       : 98        : power  :                   : 3.3V    : 4         :                
 GND*                         : 99        :        :                   :         : 4         :                
 GND                          : 100       : gnd    :                   :         :           :                
-dato_rx[3]                   : 101       : output : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : 101       :        :                   :         : 4         :                
 GND*                         : 102       :        :                   :         : 4         :                
 GND*                         : 103       :        :                   :         : 4         :                
 GND*                         : 104       :        :                   :         : 4         :                
@@ -173,15 +173,15 @@ GND*                         : 106       :        :                   :         
 GND*                         : 107       :        :                   :         : 3         :                
 ~LVDS54p/nCEO~               : 108       : output : 3.3-V LVTTL       :         : 3         : N              
 VCCIO3                       : 109       : power  :                   : 3.3V    : 3         :                
-GND*                         : 110       :        :                   :         : 3         :                
+dato_rx[4]                   : 110       : output : 3.3-V LVTTL       :         : 3         : Y              
 GND                          : 111       : gnd    :                   :         :           :                
-GND*                         : 112       :        :                   :         : 3         :                
-GND*                         : 113       :        :                   :         : 3         :                
+dato_rx[3]                   : 112       : output : 3.3-V LVTTL       :         : 3         : Y              
+dato_rx[7]                   : 113       : output : 3.3-V LVTTL       :         : 3         : Y              
 GND*                         : 114       :        :                   :         : 3         :                
-GND*                         : 115       :        :                   :         : 3         :                
-GND*                         : 116       :        :                   :         : 3         :                
+dato_rx[0]                   : 115       : output : 3.3-V LVTTL       :         : 3         : Y              
+dato_rx[5]                   : 116       : output : 3.3-V LVTTL       :         : 3         : Y              
 GND*                         : 117       :        :                   :         : 3         :                
-GND*                         : 118       :        :                   :         : 3         :                
+dato_rx[1]                   : 118       : output : 3.3-V LVTTL       :         : 3         : Y              
 GND                          : 119       : gnd    :                   :         :           :                
 VCCINT                       : 120       : power  :                   : 1.2V    :           :                
 nSTATUS                      : 121       :        :                   :         : 3         :                
@@ -190,14 +190,14 @@ CONF_DONE                    : 123       :        :                   :         
 GND                          : 124       : gnd    :                   :         :           :                
 MSEL1                        : 125       :        :                   :         : 3         :                
 MSEL0                        : 126       :        :                   :         : 3         :                
-GND*                         : 127       :        :                   :         : 3         :                
-GND*                         : 128       :        :                   :         : 3         :                
+seg_1                        : 127       : output : 3.3-V LVTTL       :         : 3         : Y              
+dato_rx[2]                   : 128       : output : 3.3-V LVTTL       :         : 3         : Y              
 GND+                         : 129       :        :                   :         : 3         :                
 rst                          : 130       : input  : 3.3-V LVTTL       :         : 3         : Y              
 GND+                         : 131       :        :                   :         : 3         :                
 GND+                         : 132       :        :                   :         : 3         :                
-GND*                         : 133       :        :                   :         : 3         :                
-GND*                         : 134       :        :                   :         : 3         :                
+dato_rx[6]                   : 133       : output : 3.3-V LVTTL       :         : 3         : Y              
+seg_0                        : 134       : output : 3.3-V LVTTL       :         : 3         : Y              
 GND*                         : 135       :        :                   :         : 3         :                
 VCCIO3                       : 136       : power  :                   : 3.3V    : 3         :                
 GND*                         : 137       :        :                   :         : 3         :                
@@ -251,7 +251,7 @@ GND                          : 184       : gnd    :                   :         
 GND*                         : 185       :        :                   :         : 2         :                
 GND                          : 186       : gnd    :                   :         :           :                
 GND*                         : 187       :        :                   :         : 2         :                
-dato_rx[5]                   : 188       : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : 188       :        :                   :         : 2         :                
 GND*                         : 189       :        :                   :         : 2         :                
 VCCINT                       : 190       : power  :                   : 1.2V    :           :                
 GND*                         : 191       :        :                   :         : 2         :                

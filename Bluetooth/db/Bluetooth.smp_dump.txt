@@ -1,4 +1,11 @@
 
+State Machine - |bluetooth|mef_rx_uart:inst_rx_uart|estado
+Name estado.stop estado.data estado.start estado.idle 
+estado.idle 0 0 0 0 
+estado.start 0 0 1 1 
+estado.data 0 1 0 1 
+estado.stop 1 0 0 1 
+
 State Machine - |bluetooth|mef_tx_uart:inst_tx_uart|estado
 Name estado.stop estado.d7 estado.d6 estado.d5 estado.d4 estado.d3 estado.d2 estado.d1 estado.d0 estado.start estado.idle 
 estado.idle 0 0 0 0 0 0 0 0 0 0 0 
