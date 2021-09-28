@@ -10,7 +10,7 @@ entity shield_iot is
 		seg1			: out std_logic;
 		seg2			: out std_logic;
 		clk_out		: out std_logic;
-		dato_aux		: out std_logic_vector (7 downto 0) := "10101010";
+		dato_aux		: out std_logic_vector (7 downto 0) := "11111111";
 		--Fin auxiliares para 7 segmentos
 		rst			: in std_logic;
 		rx_bt			: in std_logic;

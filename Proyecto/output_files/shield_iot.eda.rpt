@@ -1,5 +1,5 @@
 EDA Netlist Writer report for shield_iot
-Thu Jul 29 21:33:16 2021
+Tue Sep 28 19:01:24 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,9 +36,9 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Thu Jul 29 21:33:16 2021 ;
+; EDA Netlist Writer Status ; Successful - Tue Sep 28 19:01:24 2021 ;
 ; Revision Name             ; shield_iot                            ;
-; Top-level Entity Name     ; wifi                                  ;
+; Top-level Entity Name     ; shield_iot                            ;
 ; Family                    ; Cyclone II                            ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
@@ -66,16 +66,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                              ;
-+---------------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                         ;
-+---------------------------------------------------------------------------------------------------------+
-; C:/Users/rodrigo/Documents/MEGAsync/Facultad/Tesis/Proyecto/simulation/modelsim/shield_iot.vho          ;
-; C:/Users/rodrigo/Documents/MEGAsync/Facultad/Tesis/Proyecto/simulation/modelsim/shield_iot_fast.vho     ;
-; C:/Users/rodrigo/Documents/MEGAsync/Facultad/Tesis/Proyecto/simulation/modelsim/shield_iot_vhd.sdo      ;
-; C:/Users/rodrigo/Documents/MEGAsync/Facultad/Tesis/Proyecto/simulation/modelsim/shield_iot_vhd_fast.sdo ;
-+---------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                     ;
++------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                ;
++------------------------------------------------------------------------------------------------+
+; D:/BERNARDO/Coursera/Redes Neuronales/Git/Proyecto/simulation/modelsim/shield_iot.vho          ;
+; D:/BERNARDO/Coursera/Redes Neuronales/Git/Proyecto/simulation/modelsim/shield_iot_fast.vho     ;
+; D:/BERNARDO/Coursera/Redes Neuronales/Git/Proyecto/simulation/modelsim/shield_iot_vhd.sdo      ;
+; D:/BERNARDO/Coursera/Redes Neuronales/Git/Proyecto/simulation/modelsim/shield_iot_vhd_fast.sdo ;
++------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -84,12 +84,12 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Jul 29 21:33:15 2021
+    Info: Processing started: Tue Sep 28 19:01:23 2021
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off shield_iot -c shield_iot
-Info (204026): Generated files "shield_iot.vho", "shield_iot_fast.vho", "shield_iot_vhd.sdo" and "shield_iot_vhd_fast.sdo" in directory "C:/Users/rodrigo/Documents/MEGAsync/Facultad/Tesis/Proyecto/simulation/modelsim/" for EDA simulation tool
+Info (204026): Generated files "shield_iot.vho", "shield_iot_fast.vho", "shield_iot_vhd.sdo" and "shield_iot_vhd_fast.sdo" in directory "D:/BERNARDO/Coursera/Redes Neuronales/Git/Proyecto/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4519 megabytes
-    Info: Processing ended: Thu Jul 29 21:33:16 2021
+    Info: Processing ended: Tue Sep 28 19:01:24 2021
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

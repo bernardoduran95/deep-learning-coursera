@@ -1,5 +1,5 @@
 Flow report for shield_iot
-Wed Sep 22 18:49:34 2021
+Tue Sep 28 19:01:24 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,22 +40,22 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Wed Sep 22 18:49:34 2021           ;
+; Flow Status                        ; Successful - Tue Sep 28 19:01:24 2021           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; shield_iot                                      ;
 ; Top-level Entity Name              ; shield_iot                                      ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C8Q208C8                                     ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 684                                             ;
-;     Total combinational functions  ; 648                                             ;
-;     Dedicated logic registers      ; 260                                             ;
-; Total registers                    ; 260                                             ;
-; Total pins                         ; 33                                              ;
+; Total logic elements               ; 669 / 8,256 ( 8 % )                             ;
+;     Total combinational functions  ; 640 / 8,256 ( 8 % )                             ;
+;     Dedicated logic registers      ; 259 / 8,256 ( 3 % )                             ;
+; Total registers                    ; 259                                             ;
+; Total pins                         ; 33 / 138 ( 24 % )                               ;
 ; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0                                               ;
-; Embedded Multiplier 9-bit elements ; 0                                               ;
-; Total PLLs                         ; 0                                               ;
+; Total memory bits                  ; 0 / 165,888 ( 0 % )                             ;
+; Embedded Multiplier 9-bit elements ; 0 / 36 ( 0 % )                                  ;
+; Total PLLs                         ; 0 / 2 ( 0 % )                                   ;
 +------------------------------------+-------------------------------------------------+
 
 
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/22/2021 18:49:29 ;
+; Start date & time ; 09/28/2021 19:01:06 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; shield_iot          ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id           ;
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------------+
-; COMPILER_SIGNATURE_ID                ; 141812758225529.163234736805076       ; --            ; --          ; --                   ;
+; COMPILER_SIGNATURE_ID                ; 233497586815007.163286646613016       ; --            ; --          ; --                   ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; test bench bluetooth ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; test bench wifi      ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; test bench divisor   ;
@@ -107,29 +107,41 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                        ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:05     ; 1.0                     ; 4628 MB             ; 00:00:05                           ;
-; Total                ; 00:00:05     ; --                      ; --                  ; 00:00:05                           ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:05     ; 1.0                     ; 4640 MB             ; 00:00:04                           ;
+; Fitter                    ; 00:00:06     ; 1.0                     ; 4817 MB             ; 00:00:06                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4558 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4545 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4507 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:16     ; --                      ; --                  ; 00:00:14                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+-----------------------------------------------------------------------------------+
-; Flow OS Summary                                                                   ;
-+----------------------+------------------+-----------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
-+----------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-E88V4MJ  ; Windows 7 ; 6.2        ; x86_64         ;
-+----------------------+------------------+-----------+------------+----------------+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; DESKTOP-4QE2QT2  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; DESKTOP-4QE2QT2  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; DESKTOP-4QE2QT2  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; DESKTOP-4QE2QT2  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-4QE2QT2  ; Windows 7 ; 6.2        ; x86_64         ;
++---------------------------+------------------+-----------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off shield_iot -c shield_iot
+quartus_fit --read_settings_files=off --write_settings_files=off shield_iot -c shield_iot
+quartus_asm --read_settings_files=off --write_settings_files=off shield_iot -c shield_iot
+quartus_sta shield_iot -c shield_iot
+quartus_eda --read_settings_files=off --write_settings_files=off shield_iot -c shield_iot
 
 
 

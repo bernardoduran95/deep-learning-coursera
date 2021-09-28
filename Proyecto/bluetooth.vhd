@@ -35,7 +35,7 @@ architecture arch_bluetooth of bluetooth is
 		port (
 			clk	: in std_logic;
 			rst	: in std_logic;
-			dato	: in std_logic_vector (7 downto 0) := x"00";
+			dato	: in std_logic_vector (7 downto 0) := x"22";
 			tx		: out std_logic
 		);
 	
@@ -53,14 +53,15 @@ architecture arch_bluetooth of bluetooth is
 	
 	end component;
 
-	--"Esto es una prueba"
-	type array_data is array (0 to 17) of std_logic_vector (7 downto 0);
-	constant comando : array_data := (x"45", x"73", x"74", x"6f", x"20", x"65", x"73", x"20", x"75", x"6e", x"61", x"20", x"70", x"72", x"75", x"65", x"62", x"61");
-
+	--"Hola" 68 6f 6c 61 0a
+	type array_data is array (0 to 4) of std_logic_vector (7 downto 0);
+	constant comando : array_data := (x"00", x"0a", x"6c", x"61", x"0a");
+	
+	
 	signal clk_872			:	std_logic; --Clk de 872 Hz (~9600/11)
 	signal clk_9592		:	std_logic; --Clk de 9592 Hz (~9600)
 	signal clk_153472		:	std_logic; --Clk de 153472 Hz (9592*16)
-	signal dato_tx			:	std_logic_vector (7 downto 0) := x"00"; --Dato que se envi­a
+	signal dato_tx			:	std_logic_vector (7 downto 0) := x"22"; --Dato que se envi­a
 	signal dato_rx_sig	:	std_logic_vector (7 downto 0) := x"00"; --Dato que se recibe
 	signal long				:	integer := comando'length; --Longitud del comando que se esta enviando
 	signal char				:	integer := 0; --Posicion en el comando que se esta enviando
@@ -71,7 +72,7 @@ begin
 	
 	inst_clk_9592	: divisor_frecuencia --Clock de 9600 baudios para la transmision
 
-		generic map (5209)
+		generic map (5209) 
 		port map (clk, rst, clk_9592);
 	
 	inst_tx_uart	: mef_tx_uart

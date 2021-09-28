@@ -85,11 +85,11 @@ set_global_assignment -name EDA_TEST_BENCH_NAME "test bench shield" -section_id 
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id "test bench shield"
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME "test bench shield" -section_id "test bench shield"
 set_global_assignment -name EDA_TEST_BENCH_FILE tb_shield_iot.vhd -section_id "test bench shield"
-set_location_assignment PIN_147 -to tx_bt
-set_location_assignment PIN_150 -to rx_bt
+set_location_assignment PIN_150 -to tx_bt
+set_location_assignment PIN_147 -to rx_bt
 set_location_assignment PIN_161 -to rx_wf
 set_location_assignment PIN_165 -to tx_wf
-set_location_assignment PIN_134 -to clk_out
+set_location_assignment PIN_107 -to clk_out
 set_location_assignment PIN_113 -to dato_aux[7]
 set_location_assignment PIN_133 -to dato_aux[6]
 set_location_assignment PIN_116 -to dato_aux[5]

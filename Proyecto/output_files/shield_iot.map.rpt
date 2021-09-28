@@ -1,5 +1,5 @@
 Analysis & Synthesis report for shield_iot
-Wed Sep 22 18:49:34 2021
+Tue Sep 28 19:01:10 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -20,19 +20,18 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  12. State Machine - |shield_iot|bluetooth:inst_bluetooth|mef_tx_uart:inst_tx_uart|estado
  13. Registers Removed During Synthesis
  14. General Register Statistics
- 15. Inverted Register Statistics
- 16. Multiplexer Restructuring Statistics (Restructuring Performed)
- 17. Parameter Settings for User Entity Instance: bluetooth:inst_bluetooth|divisor_frecuencia:inst_clk_9592
- 18. Parameter Settings for User Entity Instance: bluetooth:inst_bluetooth|divisor_frecuencia:inst_clk_872
- 19. Parameter Settings for User Entity Instance: bluetooth:inst_bluetooth|divisor_frecuencia:inst_clk_153472
- 20. Parameter Settings for User Entity Instance: wifi:inst_wifi|divisor_frecuencia:inst_clk_872
- 21. Parameter Settings for User Entity Instance: wifi:inst_wifi|divisor_frecuencia:inst_clk_9592
- 22. Parameter Settings for User Entity Instance: wifi:inst_wifi|divisor_frecuencia:inst_clk_153472
- 23. Parameter Settings for User Entity Instance: divisor_frecuencia:inst_clk_aux
- 24. Port Connectivity Checks: "wifi:inst_wifi|mef_rx_uart:inst_rx_uart"
- 25. Port Connectivity Checks: "bluetooth:inst_bluetooth|mef_rx_uart:inst_rx_uart"
- 26. Elapsed Time Per Partition
- 27. Analysis & Synthesis Messages
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Parameter Settings for User Entity Instance: bluetooth:inst_bluetooth|divisor_frecuencia:inst_clk_9592
+ 17. Parameter Settings for User Entity Instance: bluetooth:inst_bluetooth|divisor_frecuencia:inst_clk_872
+ 18. Parameter Settings for User Entity Instance: bluetooth:inst_bluetooth|divisor_frecuencia:inst_clk_153472
+ 19. Parameter Settings for User Entity Instance: wifi:inst_wifi|divisor_frecuencia:inst_clk_872
+ 20. Parameter Settings for User Entity Instance: wifi:inst_wifi|divisor_frecuencia:inst_clk_9592
+ 21. Parameter Settings for User Entity Instance: wifi:inst_wifi|divisor_frecuencia:inst_clk_153472
+ 22. Parameter Settings for User Entity Instance: divisor_frecuencia:inst_clk_aux
+ 23. Port Connectivity Checks: "wifi:inst_wifi|mef_rx_uart:inst_rx_uart"
+ 24. Port Connectivity Checks: "bluetooth:inst_bluetooth|mef_rx_uart:inst_rx_uart"
+ 25. Elapsed Time Per Partition
+ 26. Analysis & Synthesis Messages
 
 
 
@@ -58,15 +57,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Sep 22 18:49:34 2021           ;
+; Analysis & Synthesis Status        ; Successful - Tue Sep 28 19:01:10 2021           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; shield_iot                                      ;
 ; Top-level Entity Name              ; shield_iot                                      ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 684                                             ;
-;     Total combinational functions  ; 648                                             ;
-;     Dedicated logic registers      ; 260                                             ;
-; Total registers                    ; 260                                             ;
+; Total logic elements               ; 678                                             ;
+;     Total combinational functions  ; 640                                             ;
+;     Dedicated logic registers      ; 259                                             ;
+; Total registers                    ; 259                                             ;
 ; Total pins                         ; 33                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -171,18 +170,18 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                          ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                   ; Library ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
-; wifi.vhd                         ; yes             ; User VHDL File  ; C:/Users/rodri/Documents/Tesis/Proyecto/wifi.vhd               ;         ;
-; shield_iot.vhd                   ; yes             ; User VHDL File  ; C:/Users/rodri/Documents/Tesis/Proyecto/shield_iot.vhd         ;         ;
-; mef_tx_uart.vhd                  ; yes             ; User VHDL File  ; C:/Users/rodri/Documents/Tesis/Proyecto/mef_tx_uart.vhd        ;         ;
-; mef_rx_uart.vhd                  ; yes             ; User VHDL File  ; C:/Users/rodri/Documents/Tesis/Proyecto/mef_rx_uart.vhd        ;         ;
-; divisor_frecuencia.vhd           ; yes             ; User VHDL File  ; C:/Users/rodri/Documents/Tesis/Proyecto/divisor_frecuencia.vhd ;         ;
-; bluetooth.vhd                    ; yes             ; User VHDL File  ; C:/Users/rodri/Documents/Tesis/Proyecto/bluetooth.vhd          ;         ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                     ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                              ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------+---------+
+; wifi.vhd                         ; yes             ; User VHDL File  ; D:/BERNARDO/Coursera/Redes Neuronales/Git/Proyecto/wifi.vhd               ;         ;
+; shield_iot.vhd                   ; yes             ; User VHDL File  ; D:/BERNARDO/Coursera/Redes Neuronales/Git/Proyecto/shield_iot.vhd         ;         ;
+; mef_tx_uart.vhd                  ; yes             ; User VHDL File  ; D:/BERNARDO/Coursera/Redes Neuronales/Git/Proyecto/mef_tx_uart.vhd        ;         ;
+; mef_rx_uart.vhd                  ; yes             ; User VHDL File  ; D:/BERNARDO/Coursera/Redes Neuronales/Git/Proyecto/mef_rx_uart.vhd        ;         ;
+; divisor_frecuencia.vhd           ; yes             ; User VHDL File  ; D:/BERNARDO/Coursera/Redes Neuronales/Git/Proyecto/divisor_frecuencia.vhd ;         ;
+; bluetooth.vhd                    ; yes             ; User VHDL File  ; D:/BERNARDO/Coursera/Redes Neuronales/Git/Proyecto/bluetooth.vhd          ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -190,28 +189,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 684   ;
+; Estimated Total logic elements              ; 678   ;
 ;                                             ;       ;
-; Total combinational functions               ; 648   ;
+; Total combinational functions               ; 640   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 392   ;
+;     -- 4 input functions                    ; 384   ;
 ;     -- 3 input functions                    ; 64    ;
 ;     -- <=2 input functions                  ; 192   ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 511   ;
+;     -- normal mode                          ; 503   ;
 ;     -- arithmetic mode                      ; 137   ;
 ;                                             ;       ;
-; Total registers                             ; 260   ;
-;     -- Dedicated logic registers            ; 260   ;
+; Total registers                             ; 259   ;
+;     -- Dedicated logic registers            ; 259   ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
 ; I/O pins                                    ; 33    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; rst   ;
-; Maximum fan-out                             ; 226   ;
-; Total fan-out                               ; 3074  ;
-; Average fan-out                             ; 3.27  ;
+; Maximum fan-out                             ; 225   ;
+; Total fan-out                               ; 3038  ;
+; Average fan-out                             ; 3.26  ;
 +---------------------------------------------+-------+
 
 
@@ -220,13 +219,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                 ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                     ; Library Name ;
 +--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------+--------------+
-; |shield_iot                                ; 648 (0)           ; 260 (0)      ; 0           ; 0            ; 0       ; 0         ; 33   ; 0            ; |shield_iot                                                             ; work         ;
-;    |bluetooth:inst_bluetooth|              ; 126 (54)          ; 105 (39)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |shield_iot|bluetooth:inst_bluetooth                                    ; work         ;
+; |shield_iot                                ; 640 (0)           ; 259 (0)      ; 0           ; 0            ; 0       ; 0         ; 33   ; 0            ; |shield_iot                                                             ; work         ;
+;    |bluetooth:inst_bluetooth|              ; 118 (47)          ; 104 (38)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |shield_iot|bluetooth:inst_bluetooth                                    ; work         ;
 ;       |divisor_frecuencia:inst_clk_153472| ; 7 (7)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |shield_iot|bluetooth:inst_bluetooth|divisor_frecuencia:inst_clk_153472 ; work         ;
 ;       |divisor_frecuencia:inst_clk_872|    ; 6 (6)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |shield_iot|bluetooth:inst_bluetooth|divisor_frecuencia:inst_clk_872    ; work         ;
 ;       |divisor_frecuencia:inst_clk_9592|   ; 11 (11)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |shield_iot|bluetooth:inst_bluetooth|divisor_frecuencia:inst_clk_9592   ; work         ;
 ;       |mef_rx_uart:inst_rx_uart|           ; 41 (41)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |shield_iot|bluetooth:inst_bluetooth|mef_rx_uart:inst_rx_uart           ; work         ;
-;       |mef_tx_uart:inst_tx_uart|           ; 7 (7)             ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |shield_iot|bluetooth:inst_bluetooth|mef_tx_uart:inst_tx_uart           ; work         ;
+;       |mef_tx_uart:inst_tx_uart|           ; 6 (6)             ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |shield_iot|bluetooth:inst_bluetooth|mef_tx_uart:inst_tx_uart           ; work         ;
 ;    |divisor_frecuencia:inst_clk_aux|       ; 56 (56)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |shield_iot|divisor_frecuencia:inst_clk_aux                             ; work         ;
 ;    |wifi:inst_wifi|                        ; 466 (379)         ; 129 (84)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |shield_iot|wifi:inst_wifi                                              ; work         ;
 ;       |divisor_frecuencia:inst_clk_153472| ; 13 (13)           ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |shield_iot|wifi:inst_wifi|divisor_frecuencia:inst_clk_153472           ; work         ;
@@ -331,7 +330,7 @@ Encoding Type:  One-Hot
 +--------------------------------------------------------------------+--------------------------------------------------------------------------------+
 ; Register name                                                      ; Reason for Removal                                                             ;
 +--------------------------------------------------------------------+--------------------------------------------------------------------------------+
-; bluetooth:inst_bluetooth|dato_tx[7]                                ; Stuck at GND due to stuck port data_in                                         ;
+; bluetooth:inst_bluetooth|dato_tx[4,7]                              ; Stuck at GND due to stuck port data_in                                         ;
 ; wifi:inst_wifi|divisor_frecuencia:inst_clk_153472|cnt[8]           ; Merged with bluetooth:inst_bluetooth|divisor_frecuencia:inst_clk_153472|cnt[8] ;
 ; wifi:inst_wifi|divisor_frecuencia:inst_clk_153472|cnt[7]           ; Merged with bluetooth:inst_bluetooth|divisor_frecuencia:inst_clk_153472|cnt[7] ;
 ; wifi:inst_wifi|divisor_frecuencia:inst_clk_153472|cnt[6]           ; Merged with bluetooth:inst_bluetooth|divisor_frecuencia:inst_clk_153472|cnt[6] ;
@@ -356,7 +355,7 @@ Encoding Type:  One-Hot
 ; wifi:inst_wifi|divisor_frecuencia:inst_clk_9592|cnt[0]             ; Merged with bluetooth:inst_bluetooth|divisor_frecuencia:inst_clk_9592|cnt[0]   ;
 ; bluetooth:inst_bluetooth|divisor_frecuencia:inst_clk_153472|cnt[0] ; Merged with divisor_frecuencia:inst_clk_aux|cnt[0]                             ;
 ; wifi:inst_wifi|dato_tx[7]                                          ; Stuck at GND due to stuck port data_in                                         ;
-; Total Number of Removed Registers = 25                             ;                                                                                ;
+; Total Number of Removed Registers = 26                             ;                                                                                ;
 +--------------------------------------------------------------------+--------------------------------------------------------------------------------+
 
 
@@ -365,26 +364,14 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 260   ;
+; Total registers                              ; 259   ;
 ; Number of registers using Synchronous Clear  ; 96    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 207   ;
+; Number of registers using Asynchronous Clear ; 206   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 98    ;
+; Number of registers using Clock Enable       ; 97    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
-
-
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; bluetooth:inst_bluetooth|dato_tx[6]    ; 1       ;
-; bluetooth:inst_bluetooth|dato_tx[2]    ; 1       ;
-; bluetooth:inst_bluetooth|dato_tx[0]    ; 1       ;
-; Total number of inverted registers = 3 ;         ;
-+----------------------------------------+---------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -394,21 +381,21 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------+
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |shield_iot|bluetooth:inst_bluetooth|divisor_frecuencia:inst_clk_153472|clk_out ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |shield_iot|bluetooth:inst_bluetooth|divisor_frecuencia:inst_clk_9592|clk_out   ;
-; 4:1                ; 25 bits   ; 50 LEs        ; 25 LEs               ; 25 LEs                 ; Yes        ; |shield_iot|divisor_frecuencia:inst_clk_aux|cnt[16]                             ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |shield_iot|wifi:inst_wifi|divisor_frecuencia:inst_clk_872|cnt[0]               ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |shield_iot|bluetooth:inst_bluetooth|divisor_frecuencia:inst_clk_153472|cnt[5]  ;
+; 4:1                ; 25 bits   ; 50 LEs        ; 25 LEs               ; 25 LEs                 ; Yes        ; |shield_iot|divisor_frecuencia:inst_clk_aux|cnt[19]                             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |shield_iot|wifi:inst_wifi|divisor_frecuencia:inst_clk_872|cnt[3]               ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |shield_iot|bluetooth:inst_bluetooth|divisor_frecuencia:inst_clk_153472|cnt[7]  ;
 ; 4:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |shield_iot|bluetooth:inst_bluetooth|divisor_frecuencia:inst_clk_9592|cnt[0]    ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |shield_iot|bluetooth:inst_bluetooth|divisor_frecuencia:inst_clk_872|cnt[2]     ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |shield_iot|wifi:inst_wifi|mef_rx_uart:inst_rx_uart|n[1]                        ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |shield_iot|bluetooth:inst_bluetooth|divisor_frecuencia:inst_clk_872|cnt[3]     ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |shield_iot|wifi:inst_wifi|mef_rx_uart:inst_rx_uart|n[0]                        ;
 ; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |shield_iot|bluetooth:inst_bluetooth|mef_rx_uart:inst_rx_uart|n[0]              ;
 ; 8:1                ; 4 bits    ; 20 LEs        ; 4 LEs                ; 16 LEs                 ; Yes        ; |shield_iot|wifi:inst_wifi|mef_rx_uart:inst_rx_uart|cnt[3]                      ;
 ; 8:1                ; 4 bits    ; 20 LEs        ; 4 LEs                ; 16 LEs                 ; Yes        ; |shield_iot|bluetooth:inst_bluetooth|mef_rx_uart:inst_rx_uart|cnt[3]            ;
-; 13:1               ; 32 bits   ; 256 LEs       ; 32 LEs               ; 224 LEs                ; Yes        ; |shield_iot|wifi:inst_wifi|i[27]                                                ;
-; 14:1               ; 32 bits   ; 288 LEs       ; 32 LEs               ; 256 LEs                ; Yes        ; |shield_iot|wifi:inst_wifi|fallo[3]                                             ;
+; 13:1               ; 32 bits   ; 256 LEs       ; 32 LEs               ; 224 LEs                ; Yes        ; |shield_iot|wifi:inst_wifi|i[28]                                                ;
+; 14:1               ; 32 bits   ; 288 LEs       ; 32 LEs               ; 256 LEs                ; Yes        ; |shield_iot|wifi:inst_wifi|fallo[4]                                             ;
 ; 27:1               ; 7 bits    ; 126 LEs       ; 49 LEs               ; 77 LEs                 ; No         ; |shield_iot|wifi:inst_wifi|Selector72                                           ;
 ; 28:1               ; 2 bits    ; 36 LEs        ; 12 LEs               ; 24 LEs                 ; No         ; |shield_iot|wifi:inst_wifi|Selector80                                           ;
 ; 29:1               ; 2 bits    ; 38 LEs        ; 4 LEs                ; 34 LEs                 ; No         ; |shield_iot|wifi:inst_wifi|Selector79                                           ;
-; 30:1               ; 2 bits    ; 40 LEs        ; 10 LEs               ; 30 LEs                 ; No         ; |shield_iot|wifi:inst_wifi|Selector74                                           ;
+; 30:1               ; 2 bits    ; 40 LEs        ; 10 LEs               ; 30 LEs                 ; No         ; |shield_iot|wifi:inst_wifi|Selector78                                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------+
 
 
@@ -505,7 +492,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -515,7 +502,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Sep 22 18:49:28 2021
+    Info: Processing started: Tue Sep 28 19:01:05 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off shield_iot -c shield_iot
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file tb_divisor_frecuencia.vhd
@@ -550,7 +537,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file tb_shie
 Info (12127): Elaborating entity "shield_iot" for the top level hierarchy
 Warning (10540): VHDL Signal Declaration warning at shield_iot.vhd(13): used explicit default value for signal "dato_aux" because signal was never assigned a value
 Info (12128): Elaborating entity "bluetooth" for hierarchy "bluetooth:inst_bluetooth"
-Warning (10540): VHDL Signal Declaration warning at bluetooth.vhd(65): used explicit default value for signal "long" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at bluetooth.vhd(66): used explicit default value for signal "long" because signal was never assigned a value
 Info (12128): Elaborating entity "divisor_frecuencia" for hierarchy "bluetooth:inst_bluetooth|divisor_frecuencia:inst_clk_9592"
 Info (12128): Elaborating entity "mef_tx_uart" for hierarchy "bluetooth:inst_bluetooth|mef_tx_uart:inst_tx_uart"
 Info (12128): Elaborating entity "divisor_frecuencia" for hierarchy "bluetooth:inst_bluetooth|divisor_frecuencia:inst_clk_872"
@@ -558,33 +545,30 @@ Info (12128): Elaborating entity "divisor_frecuencia" for hierarchy "bluetooth:i
 Info (12128): Elaborating entity "mef_rx_uart" for hierarchy "bluetooth:inst_bluetooth|mef_rx_uart:inst_rx_uart"
 Info (12128): Elaborating entity "wifi" for hierarchy "wifi:inst_wifi"
 Info (12128): Elaborating entity "divisor_frecuencia" for hierarchy "divisor_frecuencia:inst_clk_aux"
-Info (13000): Registers with preset signals will power-up high
-Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "seg1" is stuck at VCC
     Warning (13410): Pin "seg2" is stuck at GND
-    Warning (13410): Pin "dato_aux[0]" is stuck at GND
+    Warning (13410): Pin "dato_aux[0]" is stuck at VCC
     Warning (13410): Pin "dato_aux[1]" is stuck at VCC
-    Warning (13410): Pin "dato_aux[2]" is stuck at GND
+    Warning (13410): Pin "dato_aux[2]" is stuck at VCC
     Warning (13410): Pin "dato_aux[3]" is stuck at VCC
-    Warning (13410): Pin "dato_aux[4]" is stuck at GND
+    Warning (13410): Pin "dato_aux[4]" is stuck at VCC
     Warning (13410): Pin "dato_aux[5]" is stuck at VCC
-    Warning (13410): Pin "dato_aux[6]" is stuck at GND
+    Warning (13410): Pin "dato_aux[6]" is stuck at VCC
     Warning (13410): Pin "dato_aux[7]" is stuck at VCC
 Critical Warning (18061): Ignored Power-Up Level option on the following registers
-    Critical Warning (18010): Register bluetooth:inst_bluetooth|dato_tx[6] will power up to High
-    Critical Warning (18010): Register bluetooth:inst_bluetooth|dato_tx[2] will power up to High
-    Critical Warning (18010): Register bluetooth:inst_bluetooth|dato_tx[0] will power up to High
+    Critical Warning (18010): Register bluetooth:inst_bluetooth|dato_tx[5] will power up to Low
+    Critical Warning (18010): Register bluetooth:inst_bluetooth|dato_tx[1] will power up to Low
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 745 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 739 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 712 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 18 warnings
-    Info: Peak virtual memory: 4638 megabytes
-    Info: Processing ended: Wed Sep 22 18:49:34 2021
-    Info: Elapsed time: 00:00:06
+    Info (21061): Implemented 706 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 17 warnings
+    Info: Peak virtual memory: 4651 megabytes
+    Info: Processing ended: Tue Sep 28 19:01:10 2021
+    Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:05
 
 
